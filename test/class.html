@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Polygon {
+        constructor (width, height) {
+            this.name = 'polygon';
+            this.width = width;
+            this.height = height;
+        }
+        sayName() {
+            alert(this.name);
+        }
+    }
+
+    class Square extends Polygon {
+        constructor (width, height) {
+            super(width, height);
+            this.name = 'square';
+        }
+        sayName() {
+            super.sayName();
+            alert("hello world");
+        }
+    }
+
+    var a = new Square(10, 100);
+    a.sayName();
+</script>
+</body>
+</html>
